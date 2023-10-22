@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CDK Configuration",
+  "required": [
+    "repoOwner",
+    "repoName",
+    "codeBranch",
+    "connectionArn",
+    "account",
+    "region"
+  ],
+  "properties": {
+    "repoOwner": {
+      "type": "string",
+      "description": "The owner of the repository."
+    },
+    "repoName": {
+      "type": "string",
+      "description": "The name of the repository."
+    },
+    "codeBranch": {
+      "type": "string",
+      "description": "The branch of the code.",
+      "default": "main"
+    },
+    "connectionArn": {
+      "type": "string",
+      "pattern": "^arn:aws:codestar-connections:[a-z0-9-]+:[0-9]{12}:connection/[a-z0-9-]+$",
+      "description": "The ARN for the CodeStar connection."
+    },
+    "account": {
+      "type": "string",
+      "pattern": "^[0-9]{12}$",
+      "description": "The AWS account number."
+    },
+    "region": {
+      "type": "string",
+      "description": "The AWS region for the deployment."
+    },
+    "openAiSecretName": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9\\/+=,.@_-]{1,256}$",
+      "description": "The ARN for the OpenAI secret."
+    }
+  }
+}
