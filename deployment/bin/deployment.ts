@@ -1,11 +1,10 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import {BackendPipelineStack} from '../lib/pipeline';
 import {configuration as config} from "./config"
 
 const app = new cdk.App();
-new BackendPipelineStack(app, `${config.repoName}-BackendPipelineStack`, {
+new BackendPipelineStack(app, `${config.repoName}-GptPipelineStack`, {
     env: {
         account: config.account,
         region: config.region
