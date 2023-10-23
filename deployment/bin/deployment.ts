@@ -2,7 +2,7 @@
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import {BackendPipelineStack} from '../lib/pipeline';
-import {config} from "./config"
+import {configuration as config} from "./config"
 
 const app = new cdk.App();
 new BackendPipelineStack(app, `${config.repoName}-BackendPipelineStack`, {

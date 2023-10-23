@@ -1,6 +1,6 @@
 
 
-export const config = {
+export const configuration = {
   repoOwner: "__REPO_OWNER__",
   repoName: "__REPO_NAME__",
   codeBranch: "__CODE_BRANCH__",
